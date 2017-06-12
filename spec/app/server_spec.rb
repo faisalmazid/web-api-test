@@ -1,5 +1,6 @@
-require File.dirname(__FILE__) + '/server.rb'
+require 'server'
 require 'rack/test'
+require 'spec_helper'
 
 set :environment, :test
 
