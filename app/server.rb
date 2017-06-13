@@ -8,7 +8,7 @@ require_relative 'book'
 require_relative 'bookSerializer'
 
 # DB Setup
-Mongoid.load! "../mongoid.config"
+Mongoid.load! "mongoid.config"
 
 # Endpoints
     before do
