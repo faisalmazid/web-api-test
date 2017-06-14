@@ -9,7 +9,8 @@ ENV HOME /root
 WORKDIR /root
 COPY . /root
 
-RUN gem install bundler && bundle install
+RUN gem install bundler
+RUN bundle install
 
 EXPOSE 4567
 

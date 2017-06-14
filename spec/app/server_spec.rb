@@ -1,6 +1,5 @@
-require 'server'
+require './app/server'
 require 'rack/test'
-require 'spec_helper'
 
 set :environment, :test
 
@@ -17,7 +16,7 @@ describe 'Web API Service' do
   end
   
   it "should load the specific book" do
-    get '/books/59377550cbafe229b36b3ac7'
+    get '/books/593f9209cbafe26075bb6c91'
     expect(last_response.status).to eq 200
   end
 
