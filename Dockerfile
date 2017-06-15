@@ -9,10 +9,8 @@ ENV HOME /root
 WORKDIR /root
 COPY . /root
 
-RUN gem install bundler
-RUN bundle install
-
-EXPOSE 4567
+RUN gem install bundler && RUN bundle install
 
 ENTRYPOINT ["sudo","service","mongod","start"]
-ENTRYPOINT ["bundle","exec","ruby","app/server.rb"]
+ENTRYPOINT ["bundle","exec","ruby","./app/server.rb"]
+
